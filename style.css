@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #171579;
+    min-height: 100vh;
+    color: #000;
+}
+
+
+#form-container {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+#form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#form-title {
+    font-size: 25px;
+    font-weight: 600;
+    position: relative;
+}
+
+#form-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background-color: #171579;
+    border-radius: 5px;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Campos de Entrada (Grid) */
+#input-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.form-label {
+    display: flex;
+    flex-direction: column;
+    color: #404044;
+    font-size: 14px;
+    font-weight: 500;
+    gap: 6px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #f8f9fa;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #171579;
+    box-shadow: 0 0 0 2px rgba(23, 21, 121, 0.15);
+    background-color: #fff;
+}
+
+/* Ícones dos Inputs */
+.input-field i {
+    position: absolute;
+    right: 12px;
+    color: #171579;
+    pointer-events: none;
+}
+
+.input-field .password-icon {
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.input-field .password-icon:hover {
+    color: #676770;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
+}
+
+/* Seleção de Gênero */
+.radio-box {
+    grid-column: span 2;
+}
+
+.gender-group {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.gender-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #404044;
+    cursor: pointer;
+}
+
+.gender-label input[type="radio"] {
+    accent-color: #171579;
+    cursor: pointer;
+}
+
+/* Classes Utilitárias e Botões */
+.full-width {
+    grid-column: span 2;
+}
+
+.btn-default {
+    background-color: #171579;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    cursor: pointer;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease;
+}
+
+.btn-default:hover {
+    background-color: #1b19a0;
+}
+
+.btn-submit {
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    #input-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .radio-box {
+        grid-column: span 1;
+    }
+
+    #form-container {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .gender-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}

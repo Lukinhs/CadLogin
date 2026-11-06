@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Criando Conta</title>
+</head>
+<body>
+    <main id="form-container">
+        <div id="form-header">
+            <h1 id="form-title">Criar Conta</h1>
+            <button type="button" class="btn-default" title="Fazer Login">
+                <i class="fa-solid fa-right-to-bracket"></i>
+            </button>
+        </div>
+
+        <form action="" id="form">
+            <div id="input-container">
+
+                <div class="input-box">
+                    <label for="nome" class="form-label">Nome</label>
+                    <div class="input-field">
+                        <input type="text" name="nome" id="nome" class="form-input" placeholder="Digite seu nome">
+                        <i class="fa-regular fa-circle-user"></i>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="data-nascimento" class="form-label">Data de Nascimento</label>
+                    <div class="input-field">
+                        <input type="date" name="data-nascimento" id="data-nascimento" class="form-input">
+                        <i class="fa-regular fa-calendar"></i>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="email" class="form-label">Email</label>
+                    <div class="input-field">
+                        <input type="email" name="email" id="email" class="form-input" placeholder="seuemail@email.com">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="telefone" class="form-label">Telefone</label>
+                    <div class="input-field">
+                        <input type="tel" name="telefone" id="telefone" class="form-input" placeholder="Digite seu telefone">
+                        <i class="fa-solid fa-phone-flip"></i>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="senha" class="form-label">Senha</label>
+                    <div class="input-field">
+                        <input type="password" name="senha" id="senha" class="form-input" placeholder="*********">
+                        <i class="fa-regular fa-eye-slash password-icon"></i>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="confirmar-senha" class="form-label">Confirmar Senha</label>
+                    <div class="input-field">
+                        <input type="password" name="confirmar-senha" id="confirmar-senha" class="form-input" placeholder="*********">
+                        <i class="fa-regular fa-eye-slash password-icon"></i>
+                    </div>
+                </div>
+
+                <div class="radio-box">
+                    <span class="form-label">Gênero</span>
+                    <div class="gender-group">
+                        <label for="male" class="gender-label">
+                            <input type="radio" name="genero" id="male" value="male"> Masculino
+                        </label>
+                        <label for="female" class="gender-label">
+                            <input type="radio" name="genero" id="female" value="female"> Feminino
+                        </label>
+                        <label for="other" class="gender-label">
+                            <input type="radio" name="genero" id="other" value="other"> Outro
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
+            <button type="submit" class="btn-default btn-submit">
+                <i class="fa-solid fa-check"></i> Criar Conta
+            </button>
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
